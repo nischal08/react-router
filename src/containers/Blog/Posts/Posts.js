@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 import axios from './../../../axios';
 import Post from './../../../components/Post/Post';
-import './Posts.css'
+import './Posts.css';
 class Posts extends Component {
   state = {
     posts: [],
   };
 
   componentDidMount() {
+    console.log(this.props);
+
     axios
       .get('/posts')
       .then((response) => {
