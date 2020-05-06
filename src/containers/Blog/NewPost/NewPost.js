@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import axios from 'axios';
 // import { Redirect } from 'react-router-dom';
 
-
 import './NewPost.css';
 
 class NewPost extends Component {
@@ -14,6 +13,7 @@ class NewPost extends Component {
   };
 
   componentDidMount() {
+    // If auth =>  this.props.history.replace('/posts')
     console.log(this.props);
   }
 
@@ -26,13 +26,13 @@ class NewPost extends Component {
     axios.post('/posts', data).then((response) => {
       console.log(response);
       this.props.history.push('/posts');
-    //   this.props.history.replace('/posts'); same as redirect render page
+      //   this.props.history.replace('/posts'); same as redirect render page
       this.setState({ submitted: true });
     });
   };
 
   render() {
-   /*  let redirect = null;
+    /*  let redirect = null;
     if (this.state.submitted) {
       redirect = <Redirect to="/posts" />;
     } */
