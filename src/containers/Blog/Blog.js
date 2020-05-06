@@ -24,7 +24,7 @@ class Blog extends Component {
                   /* Default is active class */ exact
                   to="/"
                 >
-                  Home
+                 Posts
                 </NavLink>
               </li>
               <li>
